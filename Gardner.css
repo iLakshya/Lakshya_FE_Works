@@ -6,9 +6,19 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+:root
+{
+    --white: #ffffff;
+    --lightgreen: #709D61;
+    --black: #000000;
+    --lightbrown: #949494;
+    --lightblack: #3a3a3a;
+    --lightwhite: #E0E8E1;
+    --green: #607d3b;
+}
 body
 {
-    background-color: #F7F6F4;
+    background-color: var(--white);
     font-family: 'Manrope', sans-serif;
 }
 .navbar
@@ -22,7 +32,7 @@ body
 .box
 {
     width:60px;
-    background-color: #709D61;
+    background-color: var(--lightgreen);
     float: left;
     border-radius: 5px;
     margin-left: 15px;
@@ -33,7 +43,7 @@ body
 {
     font-size: 35px;
     font-weight: 600;
-    color: #000000;
+    color: var(--black);
     margin-left: 70px;
 }
 .max-width
@@ -51,7 +61,7 @@ body
 .navbar.sticky
 {
     padding: 15px 0;
-    background: #607d3b;
+    background-color: var(--green);
 }
 .navbar .menu li
 {
@@ -60,7 +70,7 @@ body
 }
 .navbar .menu li a
 {
-    color: #000000;
+    color: var(--black);
     font-size: 16px;
     font-weight: 500;
     margin-left: 25px;
@@ -68,11 +78,11 @@ body
 }
 .navbar .menu li a:hover
 {
-    color: #709D61;
+    color: var(--lightgreen);
 }
 .menu-btn
 {
-    color: #000000;
+    color: var(--black);
     font-size: 23px;
     cursor: pointer;
     display: none;
@@ -94,7 +104,7 @@ body
 }
 .home .text-1 span
 {
-    color: #709D61;
+    color: var(--lightgreen);
 }
 .home-content
 {
@@ -110,38 +120,38 @@ body
 {
     font-size: 16px;
     font-weight: normal;
-    color: #949494;
+    color: var(--lightbrown);
     margin-top: 30px;
 }
 .homeimg
 {
-    float:right;
-    margin-top: 130px;
+    float: right;
+    margin-top: 180px;
     margin-right: 160px;
-    height: 450px;
-    width: 554px;
+    height: 650px;
+    width: 700px;
 }
 .home .home-content a
 {
     display: inline-block;
-    background: #709D61;
-    color: #ffffff;
+    background: var(--lightgreen);
+    color: var(--white);
     font-size: 16px;
     padding: 12px 36px;
     margin-top: 30px;
     border-radius: 6px;
-    border: 2px solid #709D61;
+    border: 2px solid var(--lightgreen);
     transition: all 0.3s ease;
 
 }
 .home .home-content a:hover
 {
-    color: #000000;
+    color: var(--black);
     background: none;
 }
 .about .max-width .offer
 {
-    color: #709D61;
+    color: var(--lightgreen);
     font-size: 16px;
     font-weight: normal;
     align-items: center;
@@ -149,7 +159,7 @@ body
 }
 .about .max-width .whatoffer
 {
-   color:#000000;
+   color: var(--black);
    font-weight: bold;
    font-size: 45px;
    text-align: center;
@@ -165,7 +175,7 @@ body
 .plan
 {
     font-weight: bold;
-    color: #3a3a3a;
+    color: var(--lightblack);
     width: 100%;
     margin: auto;
     font-size: 20px;
@@ -174,7 +184,7 @@ body
 .plan-cont
 {
     width: 90%;
-    color: #949494;
+    color: var(--lightbrown);
     margin: auto;
     margin-top: 20px;
 }
@@ -186,14 +196,14 @@ body
 }
 .welcome .max-width .offer
 {
-    color: #709D61;
+    color: var(--lightgreen);
     font-size: 16px;
     font-weight: normal;
     align-items: center;
 }
 .welcome .max-width .whatoffer
 {
-   color:#000000;
+   color: var(--black);
    font-weight: bold;
    font-size: 45px;
    width: 90%;
@@ -206,30 +216,30 @@ body
 .welcome .welcont
 {
     width: 95%;
-    color: #949494;
+    color: var(--lightbrown);
 }
 .welbutton a
 {
     display: inline-block;
-    background: #ffffff;
-    color: #709D61;
+    background: var(--white);
+    color: var(--lightgreen);
     font-size: 16px;
     padding: 12px 36px;
     margin-top: 30px;
     border-radius: 6px;
-    border: 2px solid #709D61;
+    border: 2px solid var(--lightgreen);
     transition: all 0.3s ease;
     font-weight: bold;
 }
 .welbutton a:hover
 {
-    background: #709D61;
-    color: #ffffff;
+    background: var(--lightgreen);
+    color: var(--white);
 }
 /* landscape soln styling */
 .landscape .max-width .offer
 {
-    color: #709D61;
+    color: var(--lightgreen);
     font-size: 16px;
     font-weight: normal;
     align-items: center;
@@ -238,7 +248,7 @@ body
 }
 .landscape .max-width .whatoffer
 {
-   color:#000000;
+   color: var(--black);
    font-weight: bold;
    font-size: 45px;
    text-align: center;
@@ -253,7 +263,7 @@ body
 .land
 {
     font-weight: bold;
-    color: #3a3a3a;
+    color: var(--lightblack);
     width: 100%;
     margin: auto;
     font-size: 20px;
@@ -262,7 +272,7 @@ body
 .land-cont
 {
     width: 90%;
-    color: #949494;
+    color: var(--lightbrown);
     margin: 0;
     margin-top: 20px;
     margin-bottom: 60px;
@@ -270,7 +280,7 @@ body
 /* work styling */
 .work .max-width .offer
 {
-    color: #709D61;
+    color: var(--lightgreen);
     font-size: 16px;
     font-weight: normal;
     align-items: center;
@@ -279,7 +289,7 @@ body
 }
 .work .max-width .whatoffer
 {
-   color:#000000;
+   color: var(--black);
    font-weight: bold;
    font-size: 45px;
    text-align: center;
@@ -293,7 +303,7 @@ body
 }
 .testimonial .max-width .offer
 {
-    color: #709D61;
+    color: var(--lightgreen);
     font-size: 16px;
     font-weight: normal;
     align-items: center;
@@ -302,7 +312,7 @@ body
 }
 .testimonial .max-width .whatoffer
 {
-   color:#000000;
+   color: var(--black);
    font-weight: bold;
    font-size: 45px;
    text-align: center;
@@ -316,7 +326,7 @@ body
 .test-text p,h3
 {
     width: 70%;
-    color: #949494;
+    color: var(--lightbrown);
     margin-top: 10px;
 }
 .ceo
@@ -328,14 +338,14 @@ body
 }
 .news .max-width
 {
-    background-color: #E0E8E1;
+    background-color: var(--lightwhite);
     height: 250px;
     margin-top: 80px;
     margin-bottom: 30px;
 }
 .news .max-width .offer
 {
-    color: #709D61;
+    color: var(--lightgreen);
     font-size: 16px;
     font-weight: normal;
     align-items: center;
@@ -344,7 +354,7 @@ body
 }
 .news .max-width .whatoffer
 {
-   color:#000000;
+   color: var(--black);
    font-weight: bold;
    font-size: 45px;
    text-align: center;
@@ -368,19 +378,19 @@ body
     border-radius: 5px;
     width: 140px;
     border: 3px solid;
-    border-color: #709D61;
-    right: 480px;
-    top: 525%;
+    border-color: var(--lightgreen);
+    right: 610px;
+    top: 383.5%;
     height: 45px;
     cursor: pointer;
-    color: white;
-    background-color: #709d61;
+    color: var(--white);
+    background-color: var(--lightgreen);
     font-size: 20px;
     position: absolute;
 }
 .news .max-width button:hover
 {
-   background-color: #ffffff;
-   color: #000000;
-   transition: 1s;
+   background-color: var(--white);
+   color: var(--black);
+   transition: 0.5s;
 }
