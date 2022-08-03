@@ -17,7 +17,7 @@ for(item of buttons)
         }
         else if(buttonText == 'C')
         {
-            screenValue = "";
+            screenValue = " ";
             screen.value = screenValue;
         }
         else if(buttonText== '=')
