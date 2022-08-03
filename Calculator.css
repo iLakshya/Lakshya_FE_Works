@@ -1,3 +1,8 @@
+:root
+{
+    --blue: #3689ff;
+    --lightblue: #69c6ff;
+}
 .container
 {
     text-align: center;
@@ -10,13 +15,13 @@ table
 input
 {
     font-size: 46px;
-    border: 8px solid #3689ff;
+    border: 8px solid var(--blue);
     border-radius: 12px;
 }
 button
 {
     font-size: 53px;
-    background-color: #69c6ff;
+    background-color: var(--lightblue);
     width: 120px;
     height: 82px;    
     border-radius: 20px;
@@ -24,8 +29,8 @@ button
 .calculator
 {
     display: inline-block;
-    border: 10px solid #3689ff;
-    background-color: #3689ff;
+    border: 10px solid var(--blue);
+    background-color: var(--blue);
     border-radius: 15px;
     padding: 15px;
 }
