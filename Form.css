@@ -1,0 +1,55 @@
+body
+{
+    background-color: rgb(153 104 89);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 98vh;
+    background-color: rgb(247 246 240)
+}
+.container h1
+{
+    color: rgb(0 0 0);
+    margin: 20px;
+}
+.registrationform
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    color: rgb(0 0 0);
+    font-size: 18px;
+    padding: 20px;
+}
+.registrationform input
+{
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+}
+.registrationform select
+{
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+.registrationform .submit
+{
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(112 121 123);
+    color: rgb(225 225 225);
+    font-size: 16px;
+}
+.registrationform .submit:hover
+{
+    color: rgb(0 0 0);
+    transition: color 0.3s ease;
+}
