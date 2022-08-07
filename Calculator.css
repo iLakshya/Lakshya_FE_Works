@@ -1,0 +1,36 @@
+:root
+{
+    --blue: rgb(54 137 255);
+    --lightblue: rgb(105 198 255);
+}
+.container
+{
+    text-align: center;
+    margin-top: 30px;
+}
+table
+{
+    margin: auto ;
+}
+input
+{
+    font-size: 46px;
+    border: 8px solid var(--blue);
+    border-radius: 12px;
+}
+button
+{
+    font-size: 53px;
+    background-color: var(--lightblue);
+    width: 120px;
+    height: 82px;    
+    border-radius: 20px;
+}
+.calculator
+{
+    display: inline-block;
+    border: 10px solid var(--blue);
+    background-color: var(--blue);
+    border-radius: 15px;
+    padding: 15px;
+}
