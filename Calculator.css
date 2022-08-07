@@ -1,7 +1,7 @@
 :root
 {
-    --blue: #3689ff;
-    --lightblue: #69c6ff;
+    --blue: rgb(54 137 255);
+    --lightblue: rgb(105 198 255);
 }
 .container
 {
