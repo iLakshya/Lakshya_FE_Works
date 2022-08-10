@@ -120,7 +120,7 @@ for(item in apparel)
             'Brand':apparel[item].Brand,
             'Actual_price':apparel[item].Actual_price,
             'Discount':apparel[item].Discount,
-            'Selling_price':apparel[item].Actual_price*((1-apparel[item].Discount))/100};
+            'Selling_price':apparel[item].Actual_price*((1-(apparel[item].Discount)/100))};
     apparel2.push(item2);
 }
 console.log(apparel2);
@@ -149,5 +149,5 @@ console.log(item = apparel.filter(item => item.Category.indexOf('clothes') !== -
 //Task 5
 // Convert the given list into a collection where items are grouped according to their category
 
-const groups = _.groupBy(apparel, Category => apparel.Category);
-console.log(groupss);
+const groups = groupBy(apparel, Category => apparel.Category);
+console.log(groups);
