@@ -149,5 +149,5 @@ console.log(item = apparel.filter(item => item.Category.indexOf('clothes') !== -
 //Task 5
 // Convert the given list into a collection where items are grouped according to their category
 
-const groups = groupBy(apparel, Category => apparel.Category);
-console.log(groups);
+const group1 = apparel.group(({Category})=>Category);
+console.log(group1);
