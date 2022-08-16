@@ -79,7 +79,7 @@ const apparel = [
 ];
 
 // Task 1
-// Create a list of all items in the store
+// Create a list of all items in the store.
 
 let namelist = [];
 for(item in apparel)
@@ -90,7 +90,7 @@ console.log(namelist);
 
 // Task 2
 /* Consider the second item in the list. 
-Extract its name and actual_price and move the remaining properties to another variable */
+Extract its name and actual_price and move the remaining properties to another variable.*/
 
 let seconditemlist = [];
 let remitemlist = [];
@@ -110,7 +110,7 @@ console.log(seconditemlist, remitemlist);
 // Task 3
 /* Iterate through each item in the list to compute the selling price according to the formula
 (selling price = actual_price*(1-discount/100)).
-Append that value to an item and create a new list consisting of the modified items */
+Append that value to an item and create a new list consisting of the modified items.*/
 
 let apparel2 = [];
 for(item in apparel)
@@ -126,7 +126,7 @@ for(item in apparel)
 console.log(apparel2);
 
 // Task 4
-// Find all elements in the list who has a particular brand name
+// Find all elements in the list who has a particular brand name.
 
 console.log(item = apparel.filter(item => item.Brand.indexOf('Levi') !== -1));
 console.log(item = apparel.filter(item => item.Brand.indexOf('Soch') !== -1));
@@ -145,9 +145,29 @@ console.log(item = apparel.filter(item => item.Category.indexOf('jewellery') !==
 console.log(item = apparel.filter(item => item.Category.indexOf('shoes') !== -1));
 console.log(item = apparel.filter(item => item.Category.indexOf('clothes') !== -1));
 
+// Task 5
+// Convert the given list into a collection where items are grouped according to their category.
 
-//Task 5
-// Convert the given list into a collection where items are grouped according to their category
+// const group1 = apparel.group(({Category})=>Category);
+// console.log(group1);
 
-const group1 = apparel.group(({Category})=>Category);
-console.log(group1);
+// Task 6
+/* ABC is planning to conduct a promotional event where-in special discounts are given for some brands.
+Create a function to calculate the new selling price for all of the items in the store. The function accepts the brand and discount% as parameters.
+Default the discount percentage to 5%.
+Also, an additional 2% discount is provided if the final price of the commodity is above 4000, irrespective of the brand .*/
+
+let apparel3=[];
+function calsp(brand, discount=0.05)
+{
+    for(item in apparel)
+    {
+        let item3 = {'Selling_Price':apparel[item].Actual_price*((1-(apparel[item].discount)))};
+        apparel3.push(item3);
+        if(Actual_price>=4000)
+        {
+            
+        }
+    }
+    return 
+}
