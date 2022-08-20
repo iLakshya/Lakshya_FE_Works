@@ -128,6 +128,16 @@ console.log(apparel2);
 // Task 4
 // Find all elements in the list who has a particular brand name.
 
+// for(let i=0;i<apparel.length;i++)
+// {
+//     if(apparel[i].Brand=='Puma')
+//     {
+//         let appreal4;
+//         console.log(appreal4[i].Brand);
+//     }
+// }
+
+
 console.log(item = apparel.filter(item => item.Brand.indexOf('Levi') !== -1));
 console.log(item = apparel.filter(item => item.Brand.indexOf('Soch') !== -1));
 console.log(item = apparel.filter(item => item.Brand.indexOf('Westworld') !== -1));
@@ -140,16 +150,19 @@ console.log(item = apparel.filter(item => item.Brand.indexOf('Womanista') !== -1
 console.log(item = apparel.filter(item => item.Brand.indexOf('Sonic') !== -1));
 
 // Based on Categories
-console.log(item = apparel.filter(item => item.Category.indexOf('accessories') !== -1));
-console.log(item = apparel.filter(item => item.Category.indexOf('jewellery') !== -1));
-console.log(item = apparel.filter(item => item.Category.indexOf('shoes') !== -1));
-console.log(item = apparel.filter(item => item.Category.indexOf('clothes') !== -1));
 
 // Task 5
 // Convert the given list into a collection where items are grouped according to their category.
 
-// const group1 = apparel.group(({Category})=>Category);
-// console.log(group1);
+console.log(Object.entries(apparel.filter(item => item.Category.indexOf('accessories')!==-1)));
+console.log(Object.entries(apparel.filter(item => item.Category.indexOf('jewellery')!==-1)));
+console.log(Object.entries(apparel.filter(item => item.Category.indexOf('shoes')!==-1)));
+console.log(Object.entries(apparel.filter(item => item.Category.indexOf('clothes')!==-1)));
+
+// console.log(item = apparel.filter(item => item.Category.indexOf('accessories') !== -1));
+// console.log(item = apparel.filter(item => item.Category.indexOf('jewellery') !== -1));
+// console.log(item = apparel.filter(item => item.Category.indexOf('shoes') !== -1));
+// console.log(item = apparel.filter(item => item.Category.indexOf('clothes') !== -1));
 
 // Task 6
 /* ABC is planning to conduct a promotional event where-in special discounts are given for some brands.
@@ -157,17 +170,20 @@ Create a function to calculate the new selling price for all of the items in the
 Default the discount percentage to 5%.
 Also, an additional 2% discount is provided if the final price of the commodity is above 4000, irrespective of the brand .*/
 
-let apparel3=[];
-function calsp(brand, discount=0.05)
+function conduct()
 {
-    for(item in apparel)
+    for(let i=0;i<apparel.length;i++)
     {
-        let item3 = {'Selling_Price':apparel[item].Actual_price*((1-(apparel[item].discount)))};
-        apparel3.push(item3);
-        if(Actual_price>=4000)
+        let AP = apparel[i].Actual_price;
+        let discount = 5;
+        let new_price = AP*(1-discount/100);
+        if(apparel[i].Actual_price>=4000)
         {
-            
+            discount = 7
+            let np = AP*(1-discount/100);
+            console.log(np);
         }
+        console.log(new_price);
     }
-    return 
 }
+conduct();
