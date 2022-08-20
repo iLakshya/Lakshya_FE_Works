@@ -179,7 +179,7 @@ function conduct()
         let new_price = AP*(1-discount/100);
         if(apparel[i].Actual_price>=4000)
         {
-            discount = 7
+            discount = 7;
             let np = AP*(1-discount/100);
             console.log(np);
         }
