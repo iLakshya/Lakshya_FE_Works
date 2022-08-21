@@ -108,7 +108,7 @@ for(item in apparel[1])
 console.log(seconditemlist, remitemlist);
 
 // Task 3
-/* Iterate through each item in the list to compute the selling price according to the formula
+/* Iterate through each item in the list to compute the selling price according to the formula:
 (selling price = actual_price*(1-discount/100)).
 Append that value to an item and create a new list consisting of the modified items.*/
 
@@ -168,7 +168,7 @@ console.log(Object.entries(apparel.filter(item => item.Category.indexOf('clothes
 /* ABC is planning to conduct a promotional event where-in special discounts are given for some brands.
 Create a function to calculate the new selling price for all of the items in the store. The function accepts the brand and discount% as parameters.
 Default the discount percentage to 5%.
-Also, an additional 2% discount is provided if the final price of the commodity is above 4000, irrespective of the brand .*/
+Also, an additional 2% discount is provided if the final price of the commodity is above 4000, irrespective of the brand.*/
 
 function conduct()
 {
