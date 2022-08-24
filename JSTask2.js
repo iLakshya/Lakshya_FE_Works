@@ -170,5 +170,5 @@ console.log(array4);
 var a1 = [];
 a1 = students.filter(g => g.age === 21);
 console.log(a1);
-a1['cgpa'] = 10;
+a1['CGPA'] = 10;
 console.log(a1);
