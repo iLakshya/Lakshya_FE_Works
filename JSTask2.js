@@ -2,7 +2,7 @@
 /* Consider the below array:
 const array = [1, 2, 3, 1, 4, 10, 15, 16, 5, 12, 18, 19, 2, 20]
 a. Create a new array returning with multiples of 2, sorted in descending order and for every alternate multiple replace with an alphabet limited to 3 starting from “abc”, “def” [eg: [2,”ABC”,10, “DEF”.....]
-b. What are all the possible ways to empty the above array?
+b. What are all the possible ways to empty the above array ?
 c. The above array includes many repeating values, remove them using any ES6 method.
 d. Iterate the above array without mutating to check if the value 3 exists. */
 
@@ -25,15 +25,15 @@ var array2 = [];
 array2 = array1;
 array1=[];
 console.log(array1);
-// Setting length of array to zero
+// Setting length of array to zero.
 array1 = [1,2,3,1,4,10,15,16,5,12,18,19,2,20];
 array1.length = 0;
 console.log(array1.length);
-// Using splice() function
+// Using splice() function.
 array1 = [1,2,3,1,4,10,15,16,5,12,18,19,2,20];
 array1.splice(0,array1.length);
 console.log(array1);
-// Using pop() function
+// Using pop() function.
 array1 = [1,2,3,1,4,10,15,16,5,12,18,19,2,20];
 while(array1.length > 0)
 {
@@ -60,7 +60,7 @@ else
 
 
 // Task 2
-/* Analyze the below data representing the college students' information
+/* Analyze the below data representing the college students' information:
 const students = [
 { name: "A", age: 17, college: "UVCE", stream: 'CSE', currentYear: 1 },
 { name: "B", age: 19, college: "KEAM", stream: 'ECE', currentYear: 2 },
@@ -70,10 +70,10 @@ const students = [
 { name: "F", age: 21, college: "NETE", stream: 'EEE', currentYear: 3 }
 ]
 a. There is election voting for the post of Chairperson, for which only final year students are eligible. Create a list satisfying the above condition.
-b. Student B seems to have the wrong college name in the above data. Return an above array with the college name replaced as “NETE”
+b. Student B seems to have the wrong college name in the above data. Return an above array with the college name replaced as “NETE”.
 c. Find the total number of students that would be eligible for placements this year.
-d. Create an array with students with stream ‘EEE' and in the order of their currentYear
-e. Create a new array for the students above the age of 21, add a new property ‘cgpa’ */
+d. Create an array with students with stream ‘EEE' and in the order of their currentYear.
+e. Create a new array for the students above the age of 21, add a new property ‘cgpa’. */
 
 const students = [
     {
@@ -123,7 +123,7 @@ const students = [
 // a. Only final students are eligible. Create a list satisfying the above conditions.
 console.log(students.filter(fy => fy.currentYear === 4));
 
-// b. B has wrong college. Replace the name of the college to NETE
+// b. B has wrong college. Replace the name of the college to NETE.
 var val = [];
 val = students.filter((na) => na.name === 'B');
 console.log(val);
@@ -134,7 +134,7 @@ console.log(change);
 let ch = change.replace(/KEAM/g, 'NETE');     //using RegEx method
 console.log(ch);
 
-// c. Total number of students eligible for placements
+// c. Total number of students eligible for placements.
 console.log(students.filter((pla) => pla.currentYear === 4));
 let counter = 0;
 for(let i=0;i<students.length;i++)
@@ -146,7 +146,7 @@ for(let i=0;i<students.length;i++)
 }
 console.log(counter);
 
-// d. Array with students with stream 'EEE' & in order of current year
+// d. Array with students with stream 'EEE' & in order of current year.
 let array3 = [];
 for(let i=0;i<students.length;i++)
 {
@@ -157,7 +157,7 @@ for(let i=0;i<students.length;i++)
 }
 console.log(array3);
 
-// e. Array with students above age of 21 with a new property 'CGPA'
+// e. Array with students above age of 21 with a new property 'CGPA'.
 let array4 = [];
 for(let i=0;i<students.length;i++)
 {
@@ -172,3 +172,49 @@ a1 = students.filter(g => g.age === 21);
 console.log(a1);
 a1['CGPA'] = 10;
 console.log(a1);
+
+
+//Task 3
+/* Analyze the below data;
+const arr1 = [
+{ key: "1", value: "abc"},
+{ key: "2", value: "def"},
+{ key: "3", value: "ghi"},
+{ key: "4", value: "jkl"}
+];
+a. Return a reserved array with only the value for key 3 altered with value: “xyz”, maintaining the remaining key-value pairs.
+b. Return an array containing only the values and append them to form a single word.
+c. From the above, the obtained single word, extract the exact middle letter. */
+
+const arr1 = [
+    {
+        key: "1",
+        value: "abc"
+    },
+    {
+        key: "2",
+        value: "def"
+    },
+    {
+        key: "3",
+        value: "ghi"
+    },
+    {
+        key: "4",
+        value: "jkl"
+    }
+];
+
+// a. Change key 3 value to "xyz".
+var arr11 = [];
+var arr11 = arr1;
+var arr2 = [{key: "1", value: "abc"},{key: "2", value: "def"},{key: "3", value: "xyz"},{key: "4", value: "jkl"}];
+let keys1 = Object.keys(arr2);
+keys1.map(x=>{
+    arr11[x] = arr2[x]
+});
+console.log(arr11);
+
+// b. Array containing only the values and append to form a single word.
+var arr22 = [];
+console.log(arr1);
