@@ -225,7 +225,7 @@ var b = arr1.map(getValues);
 var c = b.join("");
 console.log(c);
 
-// c. Extract exact middle letter from the string
+// c. Extract exact middle letter from the string.
 let mid, length;
 if(c.length%2==0)
 {
@@ -236,7 +236,7 @@ if(c.length%2==0)
 }
 
 
-//Task 4
+// Task 4
 /* Combine the below two objects and create an array with only the object keys:
 const obj1 = {a: 1 , b: 2}
 const obj2 = {c:3, d:4 , e:5} */
@@ -252,3 +252,42 @@ console.log(obj3);
 let arrkeys = [];
 arrkeys = Object.keys(obj3);
 console.log(arrkeys);
+
+
+// Task 5
+/* let Obj =
+{
+    name: "ABC",
+    email: "abc@gmail.com",
+    age: 25,
+    address: { city: "Tvpm", state: "Kerala", pinCode: 12345 }
+}
+a. From the above, console the address values (using destructuring)
+b. Write a function that prevents the above object from adding new properties but changes its pinCode to 55555 */
+
+let Obj =
+{
+    name: "ABC",
+    email: "abc@gmail.com",
+    age: 25,
+    address: {city:"TVPM", state: "Kerela", pinCode: 12345}
+}
+
+// a. Find address values through destructuring.
+let {address} = Obj;
+console.log(address);
+
+// b. Prevent the above object from adding new properties.
+Object.preventExtensions(address);
+try
+{
+    address.abc = 23; 
+}
+catch(e)
+{
+    console.log(e);
+}
+
+// Change the pincode to 55555
+new_obj = {...Obj, address: {city: "TVPM", state: "Kerela", pinCode: 55555}}
+console.log(new_obj);
