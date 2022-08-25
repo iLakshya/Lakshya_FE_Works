@@ -216,5 +216,39 @@ keys1.map(x=>{
 console.log(arr11);
 
 // b. Array containing only the values and append to form a single word.
-var arr22 = [];
 console.log(arr1);
+function getValues(val)
+{
+    return[val.value];
+}
+var b = arr1.map(getValues);
+var c = b.join("");
+console.log(c);
+
+// c. Extract exact middle letter from the string
+let mid, length;
+if(c.length%2==0)
+{
+    mid = (c.length+1)/2;
+    console.log(c.slice(mid-1,mid));
+    console.log(c.slice(mid,mid+1));
+    // since the middle letter can be 6 or 7, hence slice is used for 6th and 7th letter respectively.
+}
+
+
+//Task 4
+/* Combine the below two objects and create an array with only the object keys:
+const obj1 = {a: 1 , b: 2}
+const obj2 = {c:3, d:4 , e:5} */
+
+const obj1 = {a:1, b:2}
+const obj2 = {c:3, d:4, e:5}
+
+// Merge two objects.
+let obj3 = {...obj1, ...obj2};
+console.log(obj3);
+
+// Array with only object keys.
+let arrkeys = [];
+arrkeys = Object.keys(obj3);
+console.log(arrkeys);
