@@ -241,8 +241,8 @@ if(c.length%2==0)
 const obj1 = {a: 1 , b: 2}
 const obj2 = {c:3, d:4 , e:5} */
 
-const obj1 = {a:1, b:2}
-const obj2 = {c:3, d:4, e:5}
+const obj1 = {a:1, b:2};
+const obj2 = {c:3, d:4, e:5};
 
 // Merge two objects.
 let obj3 = {...obj1, ...obj2};
@@ -289,5 +289,5 @@ catch(e)
 }
 
 // Change the pincode to 55555
-new_obj = {...Obj, address: {city: "TVPM", state: "Kerela", pinCode: 55555}}
+new_obj = {...Obj, address: {city: "TVPM", state: "Kerela", pinCode: 55555}};
 console.log(new_obj);
