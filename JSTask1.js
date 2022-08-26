@@ -88,6 +88,7 @@ for(item in apparel)
 }
 console.log(namelist);
 
+
 // Task 2
 /* Consider the second item in the list. 
 Extract its name and actual_price and move the remaining properties to another variable. */
@@ -107,6 +108,7 @@ for(item in apparel[1])
 }
 console.log(seconditemlist, remitemlist);
 
+
 // Task 3
 /* Iterate through each item in the list to compute the selling price according to the formula:
 (selling price = actual_price*(1-discount/100)).
@@ -124,6 +126,7 @@ for(item in apparel)
     apparel2.push(item2);
 }
 console.log(apparel2);
+
 
 // Task 4
 // Find all elements in the list who has a particular brand name.
@@ -163,6 +166,7 @@ console.log(Object.entries(apparel.filter(item => item.Category.indexOf('clothes
 // console.log(item = apparel.filter(item => item.Category.indexOf('jewellery') !== -1));
 // console.log(item = apparel.filter(item => item.Category.indexOf('shoes') !== -1));
 // console.log(item = apparel.filter(item => item.Category.indexOf('clothes') !== -1));
+
 
 // Task 6
 /* ABC is planning to conduct a promotional event where-in special discounts are given for some brands.
