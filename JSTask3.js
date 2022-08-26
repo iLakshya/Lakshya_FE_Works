@@ -53,5 +53,100 @@ console.log(sum);
 
 var gidname = teams.map(({groupId, name})=>({groupId, name}));
 console.log(gidname);
-// let gidname1 = Object.entries(gidname).map(([key, value])=>({key, value}));
-// console.log(gidname1);
+
+
+let na = [];
+let gid = [];
+for(i in teams)
+{
+    na.push(teams[i].name);
+}
+console.log(na);
+
+for(i in teams)
+{
+    gid.push(teams[i].groupId);
+}
+console.log(gid);
+
+let obj = {};
+na.forEach((element, index)=>{
+    obj[element] = gid[index];
+});
+console.log(obj); // Print array
+// console.log(Object.values(obj)); // Print values
+// console.log(Object.keys(obj)); // Print keys
+
+
+// Filter teams have points higher than or equal to 20 and are in group 1.
+
+let pts = [];
+for(i in teams)
+{
+    pts.push(teams[i].points);
+}
+console.log(pts);
+let filter1 = pts.filter((n) => n>=20);
+console.log(filter1);
+var gid1 = [];
+for(i in teams)
+{
+    gid1.push(teams[i].groupId);
+}
+console.log(gid1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Find the name of the team whose id is 4.
+
+Find the team which is in both group 1 & 2 and convert that particular object to array as shown in the example below:
+{
+    name: 'team name',
+    id: 0,
+    points: 90,
+    group: [3,4,2]
+}
+to
+[['name','team name'], ['id', 0], ['points', 90], ['group', [3, 4, 2] ]]
+
+Check if any team is in group 3 and in group 4
+
+Reduce 5 points for teams in group 3 into a new array
+
+Print the names of all teams separated by a coma
+
+Check if all teams have points greater than 10
+
+Remove keys “awayJerseyColour” and “captain” and print them as well as the remaining details as an object without mutating:
+const manU = 
+{
+    name: "Manchester United",
+    id: 1,
+    group: [“Champions League”, "League Cup"],
+    points: 10,
+    jerseyColour: "red",
+    homeGround: "Old Trafford",
+    awayJerseyColour: "black",
+    captain: "Harry",
+    coach: "OGS",
+} */
