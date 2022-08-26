@@ -77,46 +77,46 @@ e. Create a new array for the students above the age of 21, add a new property â
 
 const students = [
     {
-    name: "A",
-    age: 17,
-    college: "UVCE",
-    stream: 'CSE',
-    currentYear: 1
+        name: "A",
+        age: 17,
+        college: "UVCE",
+        stream: 'CSE',
+        currentYear: 1
     },
     {
-    name: "B",
-    age: 19,
-    college: "KEAM",
-    stream:'ECE',
-    currentYear: 2
+        name: "B",
+        age: 19,
+        college: "KEAM",
+        stream:'ECE',
+        currentYear: 2
     },
     {
-    name: "C",
-    age: 23,
-    college: "UVCE",
-    stream: 'EEE',
-    currentYear: 4
+        name: "C",
+        age: 23,
+        college: "UVCE",
+        stream: 'EEE',
+        currentYear: 4
     },
     {
-    name: "D",
-    age: 18,
-    college: "UVCE",
-    stream: 'CSE',
-    currentYear: 3
+        name: "D",
+        age: 18,
+        college: "UVCE",
+        stream: 'CSE',
+        currentYear: 3
     },
     {
-    name: "E",
-    age: 22,
-    college: "KEAM",
-    stream: 'AEI',
-    currentYear: 4
+        name: "E",
+        age: 22,
+        college: "KEAM",
+        stream: 'AEI',
+        currentYear: 4
     },
     {
-    name: "F",
-    age: 21,
-    college: "NETE",
-    stream: 'EEE',
-    currentYear: 3
+        name: "F",
+        age: 21,
+        college: "NETE",
+        stream: 'EEE',
+        currentYear: 3
     }
 ];
 
