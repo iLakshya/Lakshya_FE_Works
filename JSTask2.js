@@ -262,8 +262,8 @@ console.log(arrkeys);
     age: 25,
     address: { city: "Tvpm", state: "Kerala", pinCode: 12345 }
 }
-a. From the above, console the address values (using destructuring)
-b. Write a function that prevents the above object from adding new properties but changes its pinCode to 55555 */
+a. From the above, console the address values (using destructuring).
+b. Write a function that prevents the above object from adding new properties but changes its pinCode to 55555. */
 
 let Obj =
 {
@@ -288,6 +288,6 @@ catch(e)
     console.log(e);
 }
 
-// Change the pincode to 55555
+// Change the pincode to 55555.
 new_obj = {...Obj, address: {city: "TVPM", state: "Kerela", pinCode: 55555}};
 console.log(new_obj);
