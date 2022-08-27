@@ -80,25 +80,24 @@ console.log(obj); // Print array
 
 // Filter teams have points higher than or equal to 20 and are in group 1.
 
-let pts = [];
-for(i in teams)
+// let filter1 = teams.filter(function(pt,grpid){
+//     return (pt.points >= 20) || (grpid === )
+// });
+// console.log(filter1);
+
+let group1=[];
+for(let i=0; i<=teams.length; i++)
 {
-    pts.push(teams[i].points);
+    for(item in teams[i])
+    {
+        if(teams[i].groupId[0]===1 && teams[i].points>=20)
+        {
+            group1.push(teams[i]);
+            break;
+        }
+    }
 }
-console.log(pts);
-let filter1 = pts.filter((n) => n>=20);
-console.log(filter1);
-var gid1 = [];
-for(i in teams)
-{
-    gid1.push(teams[i].groupId);
-}
-console.log(gid1);
-
-
-
-
-
+console.log(group1);
 
 
 
