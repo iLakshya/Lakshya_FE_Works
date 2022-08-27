@@ -14,7 +14,7 @@ for(var i=0;i < array.length; i++)
 }
 console.log(array);
 
-// Arrange Descending Order
+// Arrange Descending Order.
 array.sort(function(a,b){return b-a});
 console.log(array);
 
@@ -174,7 +174,7 @@ a1['CGPA'] = 10;
 console.log(a1);
 
 
-//Task 3
+// Task 3
 /* Analyze the below data;
 const arr1 = [
 { key: "1", value: "abc"},
