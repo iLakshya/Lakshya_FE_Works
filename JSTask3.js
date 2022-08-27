@@ -100,25 +100,14 @@ for(let i=0; i<=teams.length; i++)
 console.log(group1);
 
 
+// Find the name of the team whose id is 4.
+
+console.log(teams.filter(i => {
+    return i.id == 4;
+}));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Find the name of the team whose id is 4.
-
-Find the team which is in both group 1 & 2 and convert that particular object to array as shown in the example below:
+/* Find the team which is in both group 1 & 2 and convert that particular object to array as shown in the example below:
 {
     name: 'team name',
     id: 0,
@@ -126,9 +115,33 @@ Find the team which is in both group 1 & 2 and convert that particular object to
     group: [3,4,2]
 }
 to
-[['name','team name'], ['id', 0], ['points', 90], ['group', [3, 4, 2] ]]
+[['name','team name'], ['id', 0], ['points', 90], ['group', [3, 4, 2]]] */
 
-Check if any team is in group 3 and in group 4
+let na1 = [];
+for(let i=0;i<teams.length;i++)
+{
+    for(item in teams[i])
+    {
+        if((teams[i].groupId[0]===1 && teams[i].groupId[1]===2)||(teams[i].groupId[0]===2 && teams[i].groupId[1]===1))
+        {
+            na1.push(teams[i]);
+            break;
+        }
+    }
+}
+console.log(na1);
+
+
+
+
+
+
+
+
+
+
+
+/* Check if any team is in group 3 and in group 4
 
 Reduce 5 points for teams in group 3 into a new array
 
