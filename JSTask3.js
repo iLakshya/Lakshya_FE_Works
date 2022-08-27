@@ -78,6 +78,7 @@ console.log(obj); // Print array
 // console.log(Object.keys(obj)); // Print keys
 
 
+// Task 5
 // Filter teams have points higher than or equal to 20 and are in group 1.
 
 // let filter1 = teams.filter(function(pt,grpid){
@@ -90,7 +91,7 @@ for(let i=0; i<=teams.length; i++)
 {
     for(item in teams[i])
     {
-        if(teams[i].groupId[0]===1 && teams[i].points>=20)
+        if((teams[i].groupId[0]===1 || teams[i].groupId[1]===1) && teams[i].points>=20)
         {
             group1.push(teams[i]);
             break;
@@ -100,6 +101,7 @@ for(let i=0; i<=teams.length; i++)
 console.log(group1);
 
 
+// Task 6
 // Find the name of the team whose id is 4.
 
 console.log(teams.filter(i => {
@@ -107,6 +109,8 @@ console.log(teams.filter(i => {
 }));
 
 
+
+// Task 7
 /* Find the team which is in both group 1 & 2 and convert that particular object to array as shown in the example below:
 {
     name: 'team name',
@@ -120,7 +124,7 @@ to
 let na1 = [];
 for(let i=0;i<teams.length;i++)
 {
-    for(item in teams[i])
+    for(IDS in teams[i])
     {
         if((teams[i].groupId[0]===1 && teams[i].groupId[1]===2)||(teams[i].groupId[0]===2 && teams[i].groupId[1]===1))
         {
@@ -132,6 +136,61 @@ for(let i=0;i<teams.length;i++)
 console.log(na1);
 
 
+// Task 8
+// Check if any team is in group 3 and in group 4.
+
+let gr34 = [];
+for(let i=0;i<teams.length;i++)
+{
+    for(gr in teams[i])
+    {
+        if((teams[i].groupId[0]===3 && teams[i].groupId[1]===4)||(teams[i].groupId[0]===4 && teams[i].groupId[1]===3))
+        {
+            gr34.push(teams[i]);
+            break;
+        }
+    }
+}
+console.log(gr34);
+
+
+// Task 9
+// Reduce 5 points for teams in group 3 into a new array.
+
+let gr3 = [];
+for(let i=0;i<teams.length;i++)
+{
+    for(gr in teams[i])
+    {
+        if(teams[i].groupId[0]===3 || teams[i].groupId[1]===3)
+        {
+            teams[i].points - 5;
+            gr3.push(teams[i]);
+            break;
+        }
+    }
+}
+console.log(gr3);
+
+
+// Task 10
+// Print the names of all teams separated by a coma.
+
+let name_team = teams.map(i => i.name);
+console.log(name_team);
+
+
+// Task 11
+// Check if all teams have points greater than 10.
+
+// let teampts = [];
+// for(let i=0;i<teams.length;i++)
+// {
+//     for(POINTS in teams[i])
+//     {
+//         if(teams[i].points>=)
+//     }
+// }
 
 
 
@@ -141,15 +200,12 @@ console.log(na1);
 
 
 
-/* Check if any team is in group 3 and in group 4
 
-Reduce 5 points for teams in group 3 into a new array
 
-Print the names of all teams separated by a coma
 
-Check if all teams have points greater than 10
 
-Remove keys “awayJerseyColour” and “captain” and print them as well as the remaining details as an object without mutating:
+
+/*Remove keys “awayJerseyColour” and “captain” and print them as well as the remaining details as an object without mutating:
 const manU = 
 {
     name: "Manchester United",
