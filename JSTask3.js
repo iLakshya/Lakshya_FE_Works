@@ -160,14 +160,14 @@ console.log(gr34);
 let gr3 = [];
 for(let i=0;i<teams.length;i++)
 {
-    for(gr in teams[i])
+    if(teams[i].groupId[0]===3 || teams[i].groupId[1]===3)
     {
-        if(teams[i].groupId[0]===3 || teams[i].groupId[1]===3)
-        {
-            teams[i].points - 5;
-            gr3.push(teams[i]);
-            break;
-        }
+        teams[i].points = teams[i].points - 5;
+        gr3.push(teams[i]);
+    }
+    else
+    {
+        gr3.push(teams[i]);
     }
 }
 console.log(gr3);
@@ -188,33 +188,34 @@ console.log(name_team);
 // {
 //     for(POINTS in teams[i])
 //     {
-//         if(teams[i].points>=)
+//         if(teams[i].points>10)
+//         {
+//             teampts.push(teams[i]);
+//             break;
+//         }
 //     }
 // }
+// console.log(teampts);
+
+console.log(teams.filter(({points})=>points>10));
+console.log(teams.filter(({points})=>points===10));
 
 
+// Task 12
+// Remove keys “awayJerseyColour” and “captain” and print them as well as the remaining details as an object without mutating:
 
-
-
-
-
-
-
-
-
-
-
-
-/*Remove keys “awayJerseyColour” and “captain” and print them as well as the remaining details as an object without mutating:
 const manU = 
 {
     name: "Manchester United",
     id: 1,
-    group: [“Champions League”, "League Cup"],
+    group: ["Champions League", "League Cup"],
     points: 10,
     jerseyColour: "red",
     homeGround: "Old Trafford",
     awayJerseyColour: "black",
     captain: "Harry",
     coach: "OGS",
-} */
+};
+
+const {awayJerseyColour, captain, ...updatedmanU} = manU;   // using ES6 object destructuring & spread operator
+console.log(manU);
