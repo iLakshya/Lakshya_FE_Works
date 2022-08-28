@@ -104,11 +104,21 @@ console.log(group1);
 // Task 6
 // Find the name of the team whose id is 4.
 
-console.log(teams.filter(i => {
-    return i.id == 4;
-}));
+// console.log(teams.filter(i => {
+//     return i.id == 4;
+// }));
 
-
+for(let i=0;i<teams.length;i++)
+{
+    for(teamname in teams[i])
+    {
+        if(teams[i].id === 4)
+        {
+            console.log(teams[i].name);
+            break;
+        }
+    }
+}
 
 // Task 7
 /* Find the team which is in both group 1 & 2 and convert that particular object to array as shown in the example below:
