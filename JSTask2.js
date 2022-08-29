@@ -8,7 +8,7 @@ d. Iterate the above array without mutating to check if the value 3 exists. */
 
 // a. Multiply each element by 2.
 const array = [1,2,3,1,4,10,15,16,5,12,18,19,2,20];
-for(var i=0;i < array.length; i++)
+for(let i=0;i < array.length; i++)
 {
     array[i]*=2;
 }
@@ -20,8 +20,8 @@ console.log(array);
 
 // b. Possible ways to empty the array.
 // Creating a new array and storing all the elements in that array, making first array null & printing it.
-var array1 = [1,2,3,1,4,10,15,16,5,12,18,19,2,20];
-var array2 = [];
+let array1 = [1,2,3,1,4,10,15,16,5,12,18,19,2,20];
+let array2 = [];
 array2 = array1;
 array1=[];
 console.log(array1);
@@ -124,7 +124,7 @@ const students = [
 console.log(students.filter(fy => fy.currentYear === 4));
 
 // b. B has wrong college. Replace the name of the college to NETE.
-var val = [];
+let val = [];
 val = students.filter((na) => na.name === 'B');
 console.log(val);
 console.log(val.length);
@@ -167,7 +167,7 @@ for(let i=0;i<students.length;i++)
     }
 }
 console.log(array4);
-var a1 = [];
+let a1 = [];
 a1 = students.filter(g => g.age === 21);
 console.log(a1);
 a1['CGPA'] = 10;
@@ -206,9 +206,9 @@ const arr1 = [
 ];
 
 // a. Change key 3 value to "xyz".
-var arr11 = [];
-var arr11 = arr1;
-var arr2 = [{key: "1", value: "abc"},{key: "2", value: "def"},{key: "3", value: "xyz"},{key: "4", value: "jkl"}];
+let arr11 = [];
+arr11 = arr1;
+let arr2 = [{key: "1", value: "abc"},{key: "2", value: "def"},{key: "3", value: "xyz"},{key: "4", value: "jkl"}];
 let keys1 = Object.keys(arr2);
 keys1.map(x=>{
     arr11[x] = arr2[x]
@@ -221,8 +221,8 @@ function getValues(val)
 {
     return[val.value];
 }
-var b = arr1.map(getValues);
-var c = b.join("");
+let b = arr1.map(getValues);
+let c = b.join("");
 console.log(c);
 
 // c. Extract exact middle letter from the string.
