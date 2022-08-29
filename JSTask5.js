@@ -68,3 +68,71 @@ Expected Output :
 [7, 9, 0, -2]
 [] */
 
+let ele = function(array,n){
+    if(array==null)
+    {
+        return 0;
+    }
+    if(n==null)
+    {
+        return array[0];
+    }
+    if(n<0)
+    {
+        return [];
+    }
+    return array.slice(0,n);
+}
+console.log(ele([7,9,0,-2]));
+console.log(ele([],3));
+console.log(ele([7, 9, 0, -2],3));
+console.log(ele([7, 9, 0, -2],6));
+console.log(ele([7, 9, 0, -2],-3));
+
+
+// Task 6
+// To find whether the element is present in the array or not.
+
+// Using indexOf() method.
+let pele = ["Aryann",20,"!","Lakshya","~","Karma",10,"Affan","@"];
+console.log(pele.indexOf("aryann"));
+console.log(pele.indexOf("Aryann"));
+
+// Using includes() method.
+console.log(pele.includes("!"));
+console.log(pele.includes("affan"));
+
+
+// Task 7
+// Remove the last element of an array (not using slice).
+const a1 = [1, 2, 3];
+console.log(a1.pop());
+
+
+// Task 8
+// Check If at Least one Array Element is greater than 5.
+
+let arr = [1,2,9,10,5,76,199,36,0,4,16,2];
+let arr5 = (arr,num)=>{
+    return arr.map(v => v > num ? v : "").filter(Boolean);
+}
+console.log(arr5(arr,5));
+
+/* Iterate the array using the map method and at every iteration, we check if the current value is greater than num or not?
+If true, then we return the value as it. If false, then replace the item with an empty string (Or any falsy value).
+After that using the filter method remove the falsy values. */
+
+
+// Task 9
+//Copy the object obj1 and create a new object obj2 and add a new property completed: false, without changing the original object
+const obj1 = {
+    'testable': true,
+    'removable': false,
+    'printable': false,
+    'changeable': true
+};
+
+let obj2 = obj1;
+console.log(obj2);
+obj2.completed = false;
+console.log(obj2);
