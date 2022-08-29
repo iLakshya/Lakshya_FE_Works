@@ -51,7 +51,7 @@ console.log(sum);
 // Task 4
 // Create an object with group ids as keys and an array of team names in it as values.
 
-var gidname = teams.map(({groupId, name})=>({groupId, name}));
+let gidname = teams.map(({groupId, name})=>({groupId, name}));
 console.log(gidname);
 
 
