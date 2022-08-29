@@ -155,7 +155,6 @@ gotappraisal(merge);
 
 function gotappraisal2(merge)
 {
-    let c = 0;
     let merge3 = merge.filter(({appraisal})=>appraisal > 0);
     if(merge3.length > 0)
     {
