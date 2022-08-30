@@ -136,3 +136,23 @@ let obj2 = obj1;
 console.log(obj2);
 obj2.completed = false;
 console.log(obj2);
+
+
+// Task 10
+// Write a function to remove nth element of an array.
+
+const array2 = [10, 20, 30, 40, 50, 60, 70];
+let remove = (array2,n)=>{
+    for(let i=n-1;i<array2.length;i+=n)
+    {
+        array2.splice(i,1);
+    };
+};
+remove(array2,2);
+console.log(array2);
+
+
+// Task 11
+// Remove the first 2 elements from an array using the spread operator
+const array3 = [10, 20, 30, 40, 50, 60, 70];
+
