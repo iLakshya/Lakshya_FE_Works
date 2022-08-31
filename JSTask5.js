@@ -18,6 +18,7 @@ console.log(intersection);
 
 // Task 3
 // Remove empty values from the array.
+
 const array1 = [0, 1, null, 2, "", 3, undefined, 3,,,,,, 4,, 4,, 5,, 6,,,,];
 let filtered = array1.filter((el)=>{
     return el !== null && typeof el !== 'undefined' && el !== '';
@@ -27,6 +28,7 @@ console.log(filtered);
 
 // Task 4
 //Write a JavaScript program to display whether the player is retired (i.e. display player name, nationality, and playing status) of the following players.
+
 const cricket = [
     {
         name: 'Sachin Tendulkar',
@@ -104,7 +106,7 @@ console.log(pele.includes("affan"));
 
 
 // Task 7
-// Remove the last element of an array (not using slice).
+// Remove the last element of an array (without using slice).
 const a1 = [1, 2, 3];
 console.log(a1.pop());
 
@@ -124,7 +126,7 @@ After that using the filter method remove the falsy values. */
 
 
 // Task 9
-//Copy the object obj1 and create a new object obj2 and add a new property completed: false, without changing the original object
+//Copy the object obj1 and create a new object obj2 and add a new property completed: false, without changing the original object.
 const obj1 = {
     'testable': true,
     'removable': false,
@@ -153,6 +155,15 @@ console.log(array2);
 
 
 // Task 11
-// Remove the first 2 elements from an array using the spread operator
-const array3 = [10, 20, 30, 40, 50, 60, 70];
+// Remove the first 2 elements from an array using the spread operator.
 
+const array3 = [10, 20, 30, 40, 50, 60, 70];
+let rem = ([a,x, ...array3])=>array3;
+console.log(rem(array3));
+
+
+// Task 12
+// Replace the first and second elements with 5 and 6 using splice.
+const array4 = [1,2,3,4,5];
+array4.splice(1,2,5,6);
+console.log(array4);
