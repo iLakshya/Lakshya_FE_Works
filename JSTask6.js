@@ -130,3 +130,26 @@ console.log(sort); // arranged in ascending order.
 
 // Task 3
 //Check whether the matches array contains only knockout matches and save the result to a new variable.
+
+// let a1 = [];
+// let find = function(sampleData){
+// for(i=0;i<sampleData.length;i++)
+// {
+//     for(j=0;j<j<sampleData[i].matches;j++)
+//     {
+//         console.log(sampleData[i].matches[j].knockout);
+//     }
+// }
+// }
+
+
+// console.log(sampleData.matches[1].knockout);
+// console.log(sampleData.matches[2].knockout);
+// console.log(sampleData.matches[3].knockout);
+
+let array2 = [];
+if(sampleData.matches[1].knockout === 'false')
+{
+    array2.push(sampleData);
+}
+console.log(array2);
